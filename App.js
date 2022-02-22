@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, TextInput, ScrollView } from 'react-native';
 import TodoInsert from './Components/TodoInsert';
+import TodoList from './Components/TodoList';
 
 export default function App() {
     return (
@@ -8,9 +9,7 @@ export default function App() {
             <Text style={styles.addTitle}>Hello Todsolist</Text>
             <View style={styles.card}>
                 <TodoInsert />
-                <ScrollView>
-                    <Text>TodoList</Text>
-                </ScrollView>
+                <TodoList />
             </View>
         </SafeAreaView>
     );
