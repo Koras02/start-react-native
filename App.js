@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, TextInput } from 'react-native';
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
             <Text style={styles.addTitle}>Hello Todsolist</Text>
+            <View style={styles.card}>
+                <TextInput style={styles.input} placeholder="Add an item!" />
+            </View>
         </SafeAreaView>
     );
 }
@@ -23,5 +26,20 @@ const styles = StyleSheet.create({
         fontWeight: '300',
         textAlign: 'center',
         backgroundColor: '#3143',
+    },
+    card: {
+        backgroundColor: '#fff',
+        flex: 1,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    input: {
+        padding: 20,
+        borderBottomColor: '#bbb',
+        borderBottomWidth: 1,
+        fontSize: 24,
+        marginLeft: 20,
     },
 });
